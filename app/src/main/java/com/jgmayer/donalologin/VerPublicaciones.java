@@ -26,7 +26,7 @@ public class VerPublicaciones extends AppCompatActivity {
         ArrayList<Publicacion> l= dao.selectPublicacion();
         ArrayList<String> list=new ArrayList<String>();
         for (Publicacion u:l) {
-            list.add(u.getTipo()+" "+u.getProducto()+"\n"+u.getDescripcion()+"\n"+"Contacto: "+u.getContacto());
+            list.add(u.getTipo()+" "+u.getProducto()+"\n"+u.getDescripcion()+"\n"+"Contacto: "+u.getContacto()+"\n");
         }
         ArrayAdapter<String> a = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,list);
         lista.setAdapter(a);

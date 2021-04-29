@@ -10,11 +10,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import static com.jgmayer.donalologin.R.id.btnProdCancelar;
+import static com.jgmayer.donalologin.R.id.btnProdCancelar2;
 import static com.jgmayer.donalologin.R.id.btnPublicar;
+import static com.jgmayer.donalologin.R.id.btnPublicar2;
 
 public class NuevasPublicaciones extends AppCompatActivity implements View.OnClickListener {
     EditText tip,pro,des,con;
-    Button reg,can;
+    Button reg2,can2;
     daoPublicacion dao;
 
     @Override
@@ -28,11 +30,11 @@ public class NuevasPublicaciones extends AppCompatActivity implements View.OnCli
         con=(EditText)findViewById(R.id.Contacto);
 
 
-        reg=(Button)findViewById(btnPublicar);
-        can=(Button)findViewById(btnProdCancelar);
+        reg2=(Button)findViewById(btnPublicar2);
+        can2=(Button)findViewById(btnProdCancelar2);
 
-        reg.setOnClickListener(this);
-        can.setOnClickListener(this);
+        reg2.setOnClickListener(this);
+        can2.setOnClickListener(this);
         dao=new daoPublicacion(this);
 
 
@@ -41,7 +43,8 @@ public class NuevasPublicaciones extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case btnPublicar:
+            case btnPublicar2:
+
                 Publicacion p= new Publicacion();
                 p.setTipo(tip.getText().toString());
                 p.setProducto(pro.getText().toString());
@@ -54,12 +57,15 @@ public class NuevasPublicaciones extends AppCompatActivity implements View.OnCli
                     Intent i4= new Intent(NuevasPublicaciones.this,VerPublicaciones.class);
                     startActivity(i4);
                     finish();
+
                 }
-            case btnProdCancelar:
-            Intent i6= new Intent(NuevasPublicaciones.this,Inicio.class);
-            startActivity(i6);
-            finish();
-            break;
+                break;
+            case btnProdCancelar2:
+
+                Intent i6= new Intent(NuevasPublicaciones.this,Inicio.class);
+                startActivity(i6);
+                finish();
+                break;
 
 
         }

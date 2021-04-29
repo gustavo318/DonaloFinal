@@ -121,7 +121,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
         android:background="@drawable/btn_style"
-        android:onClick="onClick"
         android:text=" Nueva Publicación "
         android:textColor="#ffffff"
         android:textSize="18sp"

@@ -32,7 +32,7 @@ public class Publicacion {
                 ", Tipo='" + Tipo + '\'' +
                 ", Producto='" + Producto + '\'' +
                 ", Descripcion='" + Descripcion + '\'' +
-                ", Contacto='" + Contacto + '\'' +
+                ", Contacto='" + Contacto  + '\'' +
                 '}';
     }
 
